@@ -7,8 +7,8 @@ import java.util.Map;
 import dte.employme.messages.MessageBuilder;
 import dte.employme.messages.MessageKey;
 import dte.employme.utils.ChatColorUtils;
+import dte.employme.utils.config.SpigotConfig;
 import dte.employme.utils.java.MapBuilder;
-import dte.spigotconfiguration.SpigotConfig;
 
 public class ConfigMessageService implements MessageService
 {

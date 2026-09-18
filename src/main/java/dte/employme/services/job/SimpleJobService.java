@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import dte.employme.utils.config.SpigotConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -45,7 +46,6 @@ import dte.employme.utils.InventoryUtils;
 import dte.employme.utils.OfflinePlayerUtils;
 import dte.employme.utils.items.ItemBuilder;
 import dte.employme.utils.java.Percentages;
-import dte.spigotconfiguration.SpigotConfig;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.HoverEvent.Action;

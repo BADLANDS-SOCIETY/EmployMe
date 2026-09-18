@@ -4,7 +4,8 @@ import static org.bukkit.ChatColor.RED;
 
 import java.time.Duration;
 
-import org.apache.commons.lang.exception.ExceptionUtils;
+import dte.employme.utils.config.ConfigLoadException;
+import dte.employme.utils.config.SpigotConfig;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
@@ -51,8 +52,6 @@ import dte.employme.utils.AutoUpdater;
 import dte.employme.utils.java.ServiceLocator;
 import dte.employme.utils.java.TimeUtils;
 import dte.modernjavaplugin.ModernJavaPlugin;
-import dte.spigotconfiguration.SpigotConfig;
-import dte.spigotconfiguration.exceptions.ConfigLoadException;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 
@@ -111,7 +110,7 @@ public class EmployMe extends ModernJavaPlugin
 			this.rewardsContainersConfig = new PlayerContainerConfig(this, "rewards");
 			this.messagesConfig = new MessagesConfig(this, MessageProvider.ENGLISH);
 		}
-		catch(ConfigLoadException exception) 
+		catch(ConfigLoadException exception)
 		{
 			disableWithError(RED + exception.getMessage());
 			return;
@@ -168,7 +167,7 @@ public class EmployMe extends ModernJavaPlugin
 		//check for updates
 		AutoUpdater.forPlugin(this, 105476)
 		.onNewUpdate(newVersion -> registerListeners(new AutoUpdateListeners(this.messageService, newVersion)))
-		.onFailedRequest(exception -> logToConsole(RED + "There was an internet error while checking for an update: " + ExceptionUtils.getMessage(exception)))
+		.onFailedRequest(exception -> logToConsole(RED + "There was an internet error while checking for an update: " + exception.getMessage()))
 		.check();
 	}
 	

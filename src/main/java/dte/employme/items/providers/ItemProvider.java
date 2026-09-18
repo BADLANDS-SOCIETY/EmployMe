@@ -2,6 +2,7 @@ package dte.employme.items.providers;
 
 import static java.util.stream.Collectors.toSet;
 
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Stream;
 
@@ -36,9 +37,7 @@ public abstract class ItemProvider
 	
 	public static Set<ItemProvider> getAvailable()
 	{
-		return Stream.of(new MMOItemsProvider())
-				.filter(ItemProvider::isAvailable)
-				.collect(toSet());
+		return new HashSet<>();
 	}
 	
 	/**

@@ -1,11 +1,12 @@
 package dte.employme.configs;
 
+import dte.employme.utils.config.Builder;
+import dte.employme.utils.config.ConfigLoadException;
+import dte.employme.utils.config.SpigotConfig;
 import org.bukkit.plugin.Plugin;
 
 import dte.employme.job.addnotifiers.JobAddNotifier;
 import dte.employme.services.job.addnotifiers.JobAddNotifierService;
-import dte.spigotconfiguration.SpigotConfig;
-import dte.spigotconfiguration.exceptions.ConfigLoadException;
 
 public class MainConfig extends SpigotConfig
 {

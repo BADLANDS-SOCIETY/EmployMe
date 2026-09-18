@@ -11,11 +11,11 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Function;
 
+import dte.employme.utils.config.SpigotConfig;
 import org.bukkit.inventory.ItemStack;
 
 import dte.employme.guis.playercontainer.PlayerContainerGUI;
 import dte.employme.services.message.MessageService;
-import dte.spigotconfiguration.SpigotConfig;
 
 public class SimplePlayerContainerService implements PlayerContainerService
 {

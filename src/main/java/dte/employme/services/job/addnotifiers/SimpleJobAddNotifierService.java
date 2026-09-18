@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.UUID;
 
 import dte.employme.job.addnotifiers.JobAddNotifier;
-import dte.spigotconfiguration.SpigotConfig;
+import dte.employme.utils.config.SpigotConfig;
 
 public class SimpleJobAddNotifierService implements JobAddNotifierService
 {

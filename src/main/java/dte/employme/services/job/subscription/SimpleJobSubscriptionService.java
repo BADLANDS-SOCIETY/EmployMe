@@ -13,9 +13,8 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.function.Function;
 
+import dte.employme.utils.config.SpigotConfig;
 import org.bukkit.Material;
-
-import dte.spigotconfiguration.SpigotConfig;
 
 public class SimpleJobSubscriptionService implements JobSubscriptionService
 {

@@ -17,7 +17,6 @@ import org.bukkit.inventory.meta.Damageable;
 import de.tr7zw.changeme.nbtapi.NBTItem;
 import dte.employme.EmployMe;
 import dte.employme.items.providers.ItemProvider;
-import dte.employme.items.providers.MMOItemsProvider;
 import dte.employme.items.providers.VanillaProvider;
 import dte.employme.rewards.Reward;
 import dte.employme.utils.java.MapBuilder;
@@ -154,19 +153,9 @@ public class Job implements ConfigurationSerializable
 
 		ItemProvider parsedProvider;
 
-		switch(goalProvider) 
-		{
-		case "MMOItems":
-			parsedProvider = new MMOItemsProvider();
-			break;
+        parsedProvider = VanillaProvider.INSTANCE;
 
-		case "Vanilla":
-		default:
-			parsedProvider = VanillaProvider.INSTANCE;
-			break;
-		}
-
-		if(!parsedProvider.isAvailable()) 
+        if(!parsedProvider.isAvailable())
 		{
 			EmployMe.getInstance().logToConsole(RED + String.format("One of your jobs uses '%s' as a Goal Provider, but it's not available! Using Vanilla!", goalProvider));
 			return VanillaProvider.INSTANCE;
@@ -177,6 +166,7 @@ public class Job implements ConfigurationSerializable
 
 	private static ItemStack removeAdditionalNBT(ItemStack item) 
 	{
+		/*
 		NBTItem nbtItem = new NBTItem(item);
 		
 		//anvil tags
@@ -190,6 +180,8 @@ public class Job implements ConfigurationSerializable
 			nbtItem.removeKey("Health");
 		}
 
-		return nbtItem.getItem();
+
+		 */
+		return item;
 	}
 }

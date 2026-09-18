@@ -4,14 +4,15 @@ import static java.util.stream.Collectors.toMap;
 
 import java.util.Arrays;
 
+import dte.employme.utils.config.Builder;
+import dte.employme.utils.config.ConfigLoadException;
+import dte.employme.utils.config.SpigotConfig;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
 import dte.employme.messages.MessageKey;
 import dte.employme.messages.MessageProvider;
 import dte.employme.services.message.ConfigMessageService;
-import dte.spigotconfiguration.SpigotConfig;
-import dte.spigotconfiguration.exceptions.ConfigLoadException;
 
 public class MessagesConfig extends SpigotConfig
 {

@@ -1,9 +1,10 @@
 package dte.employme.configs;
 
+import dte.employme.utils.config.Builder;
+import dte.employme.utils.config.ConfigLoadException;
+import dte.employme.utils.config.SpigotConfig;
 import org.bukkit.plugin.Plugin;
 
-import dte.spigotconfiguration.SpigotConfig;
-import dte.spigotconfiguration.exceptions.ConfigLoadException;
 
 public class PlayerContainerConfig extends SpigotConfig
 {

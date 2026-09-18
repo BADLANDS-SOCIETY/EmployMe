@@ -10,7 +10,7 @@ public class GlowEffect
 {
 	/**
 	 * Glows the provided {@code item} "without enchanting it" by injecting a useless enchantment to it(material dependent);
-	 * along with {@link ItemFlag.HIDE_ENCHANTS} to hide the trick (which also allows additional enchants to be added).
+	 * along with {@link ItemFlag} to hide the trick (which also allows additional enchants to be added).
 	 * <p>
 	 * <b>If you later want to enchant the item, first apply {@code GlowEffect.deleteGlow()} to it.</b>
 	 * <p>
@@ -45,7 +45,7 @@ public class GlowEffect
 	}
 
 	/**
-	 * Deletes the the {@code item}'s Glow Effect by deleting the useless enchantment it has, and the given {@link ItemFlag.HIDE_ENCHANTS}.
+	 * Deletes the the {@code item}'s Glow Effect by deleting the useless enchantment it has, and the given {@link ItemFlag}.
 	 * <p>
 	 * If the item has additional enchantments, this would result a complete reveal of of them.
 	 */
@@ -65,7 +65,7 @@ public class GlowEffect
 	
 	private static Enchantment getUselessEnchantmentFor(Material material) 
 	{
-		return isArmor(material) ? Enchantment.ARROW_INFINITE : Enchantment.PROTECTION_ENVIRONMENTAL;
+		return isArmor(material) ? Enchantment.INFINITY : Enchantment.PROJECTILE_PROTECTION;
 	}
 	
 	private static boolean isArmor(Material material) 
